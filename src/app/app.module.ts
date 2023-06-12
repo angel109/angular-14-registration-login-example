@@ -11,7 +11,6 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AppComponent } from './app.component';
 import { AlertComponent } from './_components';
 import { HomeComponent } from './home';
-import { VotacionComponent } from './votaciones/votacion/votacion.component';
 import { PaginaPrincipalVotanteComponent } from './components/pagina-principal-votante/pagina-principal-votante.component';
 import { FormularioVotacionComponent } from './components/formulario-votacion/formulario-votacion.component';
 import { AgregarNuevoCandidatoComponent } from './components/agregar-nuevo-candidato/agregar-nuevo-candidato.component';
@@ -27,7 +26,6 @@ import { AgregarNuevoCandidatoComponent } from './components/agregar-nuevo-candi
         AppComponent,
         AlertComponent,
         HomeComponent,
-        VotacionComponent,
         PaginaPrincipalVotanteComponent,
         FormularioVotacionComponent,
         AgregarNuevoCandidatoComponent

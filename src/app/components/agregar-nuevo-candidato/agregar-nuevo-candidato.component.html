@@ -1,3 +1,59 @@
-<form>
-    <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
-</form>
+<section class="vh-100" style="background-color: #9A616D;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-xl-10">
+          <div class="card" style="border-radius: 1rem;">
+            <div class="row g-0">
+              <div class="col-md-6 col-lg-5 d-none d-md-block">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
+                  alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+              </div>
+              <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                <div class="card-body p-4 p-lg-5 text-black">
+                    <h4 class="card-header">Registro</h4>
+    
+                    <div class="card-body">
+                        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                            <div class="mb-3">
+                                <label class="form-label">Nombre</label>
+                                <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                                <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                                    <div *ngIf="f.firstName.errors.required">El nombre es requerido</div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Apellido Paterno</label>
+                                <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                                <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                                    <div *ngIf="f.lastName.errors.required">El apellido es requerido</div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Apellido Materno</label>
+                                <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                    <div *ngIf="f.username.errors.required">El nombre de usuario es requerido</div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <a href="indexJefeGrupo" class="btn btn-primary">
+                        
+                                    Registrar
+                                </a>
+                                <a routerLink="../login" class="btn btn-link">Cancelar</a>
+                            </div>
+                        </form>
+                    </div>
+                
+                    
+    
+                       
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
